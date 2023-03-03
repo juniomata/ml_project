@@ -1,0 +1,5 @@
+*.ipynb_checkpoints
+*__pycache__
+/ml_env/
+test_blcokchurn.pem
+dataprep_trial.ipynb

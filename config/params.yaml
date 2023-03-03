@@ -1,0 +1,305 @@
+# Path related
+raw_dataset_dir: data/raw/telecom_customer_churn.csv
+train_set_path:
+  - data/processed/x_train.pkl
+  - data/processed/y_train.pkl
+valid_set_path:
+  - data/processed/x_valid.pkl
+  - data/processed/y_valid.pkl
+test_set_path:
+  - data/processed/x_test.pkl
+  - data/processed/y_test.pkl
+train_feng_set_path:
+  - data/processed/x_train_feng.pkl
+  - data/processed/y_train_feng.pkl
+valid_feng_set_path:
+  - data/processed/x_valid_feng.pkl
+  - data/processed/y_valid_feng.pkl
+test_feng_set_path:
+  - data/processed/x_test_feng.pkl
+  - data/processed/y_test_feng.pkl
+raw_dataset_path: data/processed/raw_dataset.pkl
+cleaned_raw_dataset_path: data/processed/raw_dataset.pkl
+
+training_log_path: log/training_log.json
+production_model_path: models/blockchurn_model_1.pkl
+le_encoder_path: models/le_encoder.pkl
+ohe_gender_path: models/ohe_gender.pkl
+ohe_married_path: models/ohe_married.pkl
+ohe_offer_path: models/ohe_offer.pkl
+ohe_phone_service_path: models/ohe_phone_service.pkl
+ohe_multiple_lines_path: models/ohe_multiple_lines.pkl
+ohe_internet_service_path: models/ohe_internet_service.pkl
+ohe_internet_type_path: models/ohe_internet_type.pkl
+ohe_online_security_path: models/ohe_online_security.pkl
+ohe_online_backup_path: models/ohe_online_backup.pkl
+ohe_device_protection_plan_path: models/ohe_device_protection_plan.pkl
+ohe_premium_tech_support_path: models/ohe_premium_tech_support.pkl
+ohe_streaming_tv_path: models/ohe_streaming_tv.pkl
+ohe_streaming_movies_path: models/ohe_streaming_movies.pkl
+ohe_streaming_music_path: models/ohe_streaming_music.pkl
+ohe_unlimited_data_path: models/ohe_unlimited_data.pkl
+ohe_contract_path: models/ohe_contract.pkl
+ohe_paperless_billing_path: models/ohe_paperless_billing.pkl
+ohe_payment_method_path: models/ohe_payment_method.pkl
+ohe_customer_status_path: models/ohe_customer_status.pkl
+
+# Debug related
+print_debug: true
+
+# Predictors and label related
+label: customer_status
+label_categories:
+  - Churned
+  - Stayed
+predictors:
+  - age
+  - number_of_referrals
+  - tenure_in_months
+  - gender
+  - married
+  - offer
+  - phone_service
+  - multiple_lines
+  - internet_service
+  - internet_type
+  - online_security
+  - online_backup
+  - device_protection_plan
+  - premium_tech_support
+  - streaming_tv
+  - streaming_movies
+  - streaming_music
+  - unlimited_data
+  - contract
+  - paperless_billing
+  - payment_method
+  - avg_monthly_long_distance_charges
+  - avg_monthly_gb_download
+  - monthly_charge
+  - total_charges
+  - total_long_distance_charges
+  - total_revenue
+
+# Columns by data type related
+int32_columns:
+  - age
+  - number_of_dependents
+  - number_of_referrals
+  - tenure_in_months
+  - total_extra_data_charges
+float_columns:
+  - avg_monthly_long_distance_charges
+  - avg_monthly_gb_download
+  - monthly_charge
+  - total_charges
+  - total_refunds
+  - total_long_distance_charges
+  - total_revenue
+object_columns_with_target:
+  - gender
+  - married
+  - offer
+  - phone_service
+  - multiple_lines
+  - internet_service
+  - internet_type
+  - online_security
+  - online_backup
+  - device_protection_plan
+  - premium_tech_support
+  - streaming_tv
+  - streaming_movies
+  - streaming_music
+  - unlimited_data
+  - contract
+  - paperless_billing
+  - payment_method
+  - customer_status
+object_columns:
+  - gender
+  - married
+  - offer
+  - phone_service
+  - multiple_lines
+  - internet_service
+  - internet_type
+  - online_security
+  - online_backup
+  - device_protection_plan
+  - premium_tech_support
+  - streaming_tv
+  - streaming_movies
+  - streaming_music
+  - unlimited_data
+  - contract
+  - paperless_billing
+  - payment_method
+
+all_int32_columns:
+  - age
+  - number_of_dependents
+  - zip_code
+  - number_of_referrals
+  - tenure_in_months
+  - total_extra_data_charges
+all_float_columns:
+  - latitude
+  - longitude
+  - avg_monthly_long_distance_charges
+  - avg_monthly_gb_download
+  - monthly_charge
+  - total_charges
+  - total_refunds
+  - total_long_distance_charges
+  - total_revenue
+all_object_columns:
+  - customer_id
+  - gender
+  - married
+  - city
+  - offer
+  - phone_service
+  - multiple_lines
+  - internet_service
+  - internet_type
+  - online_security
+  - online_backup
+  - device_protection_plan
+  - premium_tech_support
+  - streaming_tv
+  - streaming_movies
+  - streaming_music
+  - unlimited_data
+  - contract
+  - paperless_billing
+  - payment_method
+  - customer_status
+  - churn_category
+  - churn_reason
+
+# Replacement for missing value related
+missing_value_avg_monthly_long_distance_charges: 644
+missing_value_multiple_lines: 644
+missing_value_internet_type: 1344
+missing_value_avg_monthly_gb_download: 1344
+missing_value_online_security: 1344
+missing_value_online_backup: 1344
+missing_value_device_protection_plan: 1344
+missing_value_premium_tech_support: 1344
+missing_value_streaming_tv: 1344
+missing_value_streaming_movies: 1344
+missing_value_streaming_music: 1344
+missing_value_unlimited_data: 1344
+
+# Range of data related
+range_age:
+  - 19
+  - 80
+range_number_of_dependents:
+  - 0
+  - 9
+range_number_of_referrals:
+  - 0
+  - 11
+range_tenure_in_months:
+  - 1
+  - 72
+range_total_extra_data_charges:
+  - 0
+  - 150
+range_avg_monthly_long_distance_charges:
+  - 1.01
+  - 49.99
+range_avg_monthly_gb_download:
+  - 2.0
+  - 85.0
+range_monthly_charge:
+  - -10.0
+  - 118.75
+range_total_charges:
+  - 18.85
+  - 8684.8
+range_total_refunds:
+  - 0.0
+  - 49.79
+range_total_long_distance_charges:
+  - 0.0
+  - 3564.72
+range_total_revenue:
+  - 21.61
+  - 11979.34
+range_gender:
+  - Female
+  - Male
+range_married:
+  - Y
+  - N
+range_offer:
+  - None
+  - Offer E
+  - Offer D
+  - Offer A
+  - Offer B
+  - Offer C
+range_phone_service:
+  - Y
+  - N
+range_multiple_lines:
+  - N
+  - Y
+  - Unknown
+range_internet_service:
+  - Y
+  - N
+range_internet_type:
+  - Cable
+  - Fiber Optic
+  - DSL
+  - Unknown
+range_online_security:
+  - N
+  - Y
+  - Unknown
+range_online_backup:
+  - Y
+  - N
+  - Unknown
+range_device_protection_plan:
+  - N
+  - Y
+  - Unknown
+range_premium_tech_support:
+  - Y
+  - N
+  - Unknown
+range_streaming_tv:
+  - Y
+  - N
+  - Unknown
+range_streaming_movies:
+  - N
+  - Y
+  - Unknown
+range_streaming_music:
+  - N
+  - Y
+  - Unknown
+range_unlimited_data:
+  - Y
+  - N
+  - Unknown
+range_contract:
+  - One Year
+  - Month-to-Month
+  - Two Year
+range_paperless_billing:
+  - Y
+  - N
+range_payment_method:
+  - Credit Card
+  - Bank Withdrawal
+  - Mailed Check
+range_customer_status:
+  - Stayed
+  - Churned
